@@ -80,6 +80,7 @@
             this.monthCalendar1.Location = new System.Drawing.Point(611, 70);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 8;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // label1
             // 

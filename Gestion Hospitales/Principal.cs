@@ -146,6 +146,15 @@ namespace Gestion_Hospitales
             hospital.AgregarCita(cita2);
         }
 
-        
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            DateTime fechaSeleccionada = e.Start;
+            lbCitasDia.Items.Clear();
+            List<CitasdelDia> citasDelDia = hospital.ObtenerCitasDelDiaPorFecha(fechaSeleccionada);
+            foreach (var cita in citasDelDia)
+            {
+                lbCitasDia.Items.Add(cita); 
+            }
+        }
     }
 }

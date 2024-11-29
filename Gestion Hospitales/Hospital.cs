@@ -135,6 +135,10 @@ namespace HerenciaHospital
             DateTime hoy = DateTime.Today;
             return Citas.Where(c => c.Fecha.Date == hoy).ToList();
         }
+        public List<CitasdelDia> ObtenerCitasDelDiaPorFecha(DateTime fecha)
+        {
+            return Citas.Where(cita => cita.Fecha.Date == fecha.Date).ToList();
+        }
         public void AgregarCita(CitasdelDia cita)
         {
             Citas.Add(cita);
