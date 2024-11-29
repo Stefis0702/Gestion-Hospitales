@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HerenciaHospital
 {
-    public class Persona : Hospital
+    public class Persona 
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }
