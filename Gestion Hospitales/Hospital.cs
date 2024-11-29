@@ -53,26 +53,26 @@ namespace HerenciaHospital
             Console.WriteLine("Paciente agregado exitosamente.");
             return true;
         }
-        public List<string> ListarMedicos()
-        {
-            List<string> medicosList = new List<string>();
-            foreach (var medico in medicos)
-            {
-                medicosList.Add($"{medico.Nombre} {medico.Apellido} - {medico.Especialidad}");
-            }
-            return medicosList;
-        }
+        //public List<string> ListarMedicos()
+        //{
+        //    List<string> medicosList = new List<string>();
+        //    foreach (var medico in medicos)
+        //    {
+        //        medicosList.Add($"{medico.Nombre} {medico.Apellido} - {medico.Especialidad}");
+        //    }
+        //    return medicosList;
+        //}
 
         
-        public List<Paciente> ListarPacientesPorMedico(Medico medico)
-        {
-            List<Paciente> pacientesList = new List<Paciente>();
-            if (pacientesPorMedico.ContainsKey(medico))
-            {
-                pacientesList = pacientesPorMedico[medico];  
-            }
-            return pacientesList;
-        }
+        //public List<Paciente> ListarPacientesPorMedico(Medico medico)
+        //{
+        //    List<Paciente> pacientesList = new List<Paciente>();
+        //    if (pacientesPorMedico.ContainsKey(medico))
+        //    {
+        //        pacientesList = pacientesPorMedico[medico];  
+        //    }
+        //    return pacientesList;
+        //}
         public void EliminarPaciente(Medico medico, Paciente paciente)
         {
             if (pacientesPorMedico.ContainsKey(medico))
@@ -80,17 +80,17 @@ namespace HerenciaHospital
                 pacientesPorMedico[medico].Remove(paciente);
             }
         }
-        public void ListarPersonas()
-        {
-            foreach (var medico in medicos)
-            {
-                Console.WriteLine(medico);
-                foreach (var paciente in pacientesPorMedico[medico])
-                {
-                    Console.WriteLine($"  - {paciente}");
-                }
-            }
-        }
+        //public void ListarPersonas()
+        //{
+        //    foreach (var medico in medicos)
+        //    {
+        //        Console.WriteLine(medico);
+        //        foreach (var paciente in pacientesPorMedico[medico])
+        //        {
+        //            Console.WriteLine($"  - {paciente}");
+        //        }
+        //    }
+        //}
         public void ListarPacientesOMedicos(string tipo, ComboBox cmbSelMedico, ListBox listBoxResultados)
         {
             listBoxResultados.Items.Clear();  

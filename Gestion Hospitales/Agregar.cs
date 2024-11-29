@@ -16,7 +16,7 @@ namespace Gestion_Hospitales
         private Hospital hospital;
         public Agregar(Hospital hospital)
         {
-            this.hospital = new Hospital();
+            this.hospital = hospital;
             InitializeComponent();
             listBox1.SendToBack();
             cmbPersona.Items.Clear();

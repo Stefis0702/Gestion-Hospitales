@@ -43,7 +43,17 @@ namespace Gestion_Hospitales
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Agregar agregarForm = new Agregar(hospital);
+            agregarForm.FormClosed += (s, args) => ActualizarListaMedicos();
             agregarForm.Show();
+        }
+        private void ActualizarListaMedicos()
+        {
+            
+            cmbSelMedico.Items.Clear();
+            foreach (Medico medico in hospital.medicos)
+            {
+                cmbSelMedico.Items.Add(medico);
+            }
         }
 
         private void btnListar_Click(object sender, EventArgs e)
